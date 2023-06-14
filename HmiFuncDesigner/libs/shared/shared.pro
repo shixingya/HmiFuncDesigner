@@ -23,7 +23,7 @@ INCLUDEPATH += $$PWD/property
 INCLUDEPATH += $$PWD/host
 INCLUDEPATH += $$PWD/projdata
 
-include(picoc/picoc.pri)
+#include(picoc/picoc.pri)
 
 HEADERS += \
     confighelper.h \
