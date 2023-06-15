@@ -3,7 +3,7 @@ INCLUDEPATH += $$PWD
 INCLUDEPATH += $$PWD/projdata
 INCLUDEPATH += $$PWD/widgets
 
-include(picoc/picoc.pri)
+#include(picoc/picoc.pri)
 
 HEADERS += \
     $$PWD/confighelper.h \

@@ -1,4 +1,4 @@
-#ifndef ILOADER_H
+﻿#ifndef ILOADER_H
 #define ILOADER_H
 
 #include <QString>
@@ -16,14 +16,12 @@ class XMLObject;
 #define OBJECT_TITLE "Object"
 
 
-class ILoader
-{
-public:
+class ILoader {
+  public:
     virtual void fromObject(XMLObject* xml) = 0;
 };
 
-inline QStringList praseFunctions(const QString &scriptText)
-{
+inline QStringList praseFunctions(const QString &scriptText) {
     QStringList listRetFuncs;
     QStringList listFuncs = scriptText.split("|");
     foreach (QString func, listFuncs) {
@@ -35,14 +33,13 @@ inline QStringList praseFunctions(const QString &scriptText)
     return listRetFuncs;
 }
 
-inline int execFunction(const QStringList &funcs)
-{
+inline int execFunction(const QStringList &funcs) {
     if(funcs.count() == 0) {
         return -1;
     }
-    foreach (QString func, funcs) {
-        ParseScript::instance()->run_c(func);
-    }
+//    foreach (QString func, funcs) {
+//        ParseScript::instance()->run_c(func);
+//    }
     return 1;
 }
 
