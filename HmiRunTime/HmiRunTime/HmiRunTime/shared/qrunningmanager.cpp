@@ -168,6 +168,7 @@ void QRunningManager::start()
     int width = m_pProjCoreObj->m_projInfoMgr.getGraphPageWidth();
     int height = m_pProjCoreObj->m_projInfoMgr.getGraphPageHeight();
     m_pMainWindowObj->setFixedSize(QSize(width, height));
+    m_pMainWindowObj->setFixedSize(QSize(width * 2, height));
     QDesktopWidget *pDeskObj = qApp->desktop();
     m_pMainWindowObj->move((pDeskObj->width() - width) / 2, (pDeskObj->height() - height) / 2);
     if(szStartPage == "None") {
